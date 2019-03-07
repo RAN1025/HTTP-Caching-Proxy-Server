@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    proxy:
+       build: ./hw2
+       command: bash -c "./start"
+       volumes:
+         - ./hw2:/proxy
+         - ./logs:/var/log/erss/
+       ports:
+         - "12345:12345"

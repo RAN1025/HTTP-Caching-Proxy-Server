@@ -1,0 +1,51 @@
+1. In order to test the GET mtthod, we can use urls as following:
+www.example.com
+http://people.duke.edu/~bmr23/ece568/class.html
+
+2. In order to test the response which contains chunk, we open the following url,
+http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx
+It can successfully showed, so our function to handle chunk is work.
+
+3. In order to test a url which contains mutiple requests, we open the url as following,
+https://world.taobao.com/
+It can successfully showed the webpage and get the 200 response.
+
+4. In order to test POST method, we applied RESTED slot in firefox to simulate sending POST request. And it gives us 200 response which stands for success.
+
+5. In order to test the CONNECT method, we can use urls as following:
+https://www.youtube.com/
+https://www.amazon.com/
+https://www.onstartups.com/tabid/3339/bid/97052/How-To-Survive-a-Ground-Up-Rewrite-Without-Losing-Your-Sanity.aspx
+
+6. In order to test vedio urls, we use the urls as following,
+https://www.youtube.com/watch?v=zhfGLn2wu9k
+https://www.youtube.com/watch?v=UWelcIFAPxE
+https://www.youtube.com/watch?v=nTRQ0d-9jRE
+They all can show successfully and get the 200 response.
+
+7. In order to test PDF urls, we use the urls as following,
+https://sakai.duke.edu/access/content/group/ae93b519-5c11-4b26-9421-112c3b51eed9/ERSS_07_Security.pdf
+https://sakai.duke.edu/access/content/group/ae93b519-5c11-4b26-9421-112c3b51eed9/ERSS_08_Crypto.pdf
+It can be opened successfully, and get the http 200 response.
+
+
+8. We also use some bad requests which come from fake url,
+http://www.c++.com/
+We dealed with this problem and give the 400 error message back to web browser.
+
+9. In order to test the cache hit condition, we first type the url as following,
+www.example.com
+Then we refresh the webpage, it can successfully show the webpage, but the response comes from cache, and the log file shows "in cahce".
+
+10. In order to test max-age=0 and revalidation, we use the following url,
+http://www.cplusplus.com/
+http://www.artsci.utoronto.ca/futurestudents
+It can shows the webpages but it took a long time. In log file, it shows when sending request with these two urls, it need revalidation.
+
+11. In order to test searching websites, we use urls as following,
+https://www.google.com/
+https://www.baidu.com/
+https://www.bing.com/
+They all can successfully show the webpages.
+
+12. In order to test POST method in real url, we changed the password of google account and it can successfully work.
